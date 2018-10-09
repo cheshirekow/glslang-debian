@@ -1,0 +1,39 @@
+Source: glslang
+Section: devel
+Priority: optional
+Maintainer: Josh Bialkowski <josh.bialkowski@gmail.com>
+Build-Depends:
+  cmake,
+  debhelper (>=9),
+  python
+Standards-Version: 3.9.7
+Homepage: https://www.khronos.org/opengles/sdk/tools/Reference-Compiler/
+Vcs-Git: https://github.com/KhronosGroup/glslang.git
+Vcs-Browser: https://github.com/KhronosGroup/glslang
+
+Package: glslang
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: An OpenGL and OpenGL ES shader front end and validator.
+ There are several components:
+ * A GLSL/ESSL front-end for reference validation and translation of GLSL/ESSL
+   into an AST.
+ * An HLSL front-end for translation of a broad generic HLL into the AST. See
+   issue 362 and issue 701 for current status.
+ * A SPIR-V back end for translating the AST to SPIR-V.
+ * A standalone wrapper, glslangValidator, that can be used as a command-line
+   tool for the above.
+
+Package: libglslang-dev
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: An OpenGL and OpenGL ES shader front end and validator.
+ There are several components:
+ * A GLSL/ESSL front-end for reference validation and translation of GLSL/ESSL
+   into an AST.
+ * An HLSL front-end for translation of a broad generic HLL into the AST. See
+   issue 362 and issue 701 for current status.
+ * A SPIR-V back end for translating the AST to SPIR-V.
+ * A standalone wrapper, glslangValidator, that can be used as a command-line
+   tool for the above.
+
